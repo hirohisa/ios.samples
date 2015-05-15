@@ -54,31 +54,27 @@ class CustomPresentationController: UIPresentationController {
     var overlay: UIView!
 
     override func presentationTransitionWillBegin() {
-        let containerView = self.containerView
-        let presented = self.presentedViewController
 
-        self.overlay = UIView(frame: containerView.bounds)
-        self.overlay.gestureRecognizers = [UITapGestureRecognizer(target: self, action: "overlayDidTouch:")]
-        self.overlay.backgroundColor = UIColor.blackColor()
-        self.overlay.alpha = 0.0
-        containerView.insertSubview(self.overlay, atIndex: 0)
+        overlay = UIView(frame: containerView.bounds)
+        overlay.gestureRecognizers = [UITapGestureRecognizer(target: self, action: "overlayDidTouch:")]
+        overlay.backgroundColor = UIColor.blackColor()
+        overlay.alpha = 0.0
+        containerView.insertSubview(overlay, atIndex: 0)
 
-        presentedViewController.transitionCoordinator()?.animateAlongsideTransition({
-            [unowned self] context in
+        presentedViewController.transitionCoordinator()?.animateAlongsideTransition({[unowned self] context in
             self.overlay.alpha = 0.5
             }, completion: nil)
     }
 
     override func dismissalTransitionWillBegin() {
-        self.presentedViewController.transitionCoordinator()?.animateAlongsideTransition({
-            [unowned self] context in
+        self.presentedViewController.transitionCoordinator()?.animateAlongsideTransition({ [unowned self] context in
             self.overlay.alpha = 0.0
             }, completion: nil)
     }
 
     override func dismissalTransitionDidEnd(completed: Bool) {
         if completed {
-            self.overlay.removeFromSuperview()
+            overlay.removeFromSuperview()
         }
     }
 
@@ -88,23 +84,23 @@ class CustomPresentationController: UIPresentationController {
 
     override func frameOfPresentedViewInContainerView() -> CGRect {
         var presentedViewFrame = CGRectZero
-        let containerBounds = self.containerView.bounds
-        presentedViewFrame.size = self.sizeForChildContentContainer(self.presentedViewController, withParentContainerSize: containerBounds.size)
+        let containerBounds = containerView.bounds
+        presentedViewFrame.size = sizeForChildContentContainer(presentedViewController, withParentContainerSize: containerBounds.size)
         presentedViewFrame.origin.x = containerBounds.size.width - presentedViewFrame.size.width
         presentedViewFrame.origin.y = containerBounds.size.height - presentedViewFrame.size.height
         return presentedViewFrame
     }
 
     override func containerViewWillLayoutSubviews() {
-        overlay.frame = self.containerView.bounds
-        self.presentedView().frame = self.frameOfPresentedViewInContainerView()
+        overlay.frame = containerView.bounds
+        self.presentedView().frame = frameOfPresentedViewInContainerView()
     }
 
     override func containerViewDidLayoutSubviews() {
     }
 
     func overlayDidTouch(sender: AnyObject) {
-        self.presentedViewController.dismissViewControllerAnimated(true, completion: nil)
+        presentedViewController.dismissViewControllerAnimated(true, completion: nil)
     }
 
 }
@@ -130,27 +126,25 @@ class CustomAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioni
     }
 
     func animatePresentTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let presentingController: UIViewController! = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let presentedController: UIViewController! = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-        let containerView: UIView! = transitionContext.containerView()
+        let presentingController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let containerView = transitionContext.containerView()
+
         containerView.insertSubview(presentedController.view, belowSubview: presentingController.view)
-        //適当にアニメーション
-        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
+        UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
             presentedController.view.frame.origin.x -= containerView.bounds.size.width
-            }, completion: {
-                finished in
+            }, completion: { finished in
                 transitionContext.completeTransition(true)
         })
     }
 
     func animateDissmissalTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedController: UIViewController! = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let containerView: UIView! = transitionContext.containerView()
-        //適当にアニメーション
+        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let containerView = transitionContext.containerView()
+
         UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
             presentedController.view.frame.origin.x = containerView.bounds.size.width
-            }, completion: {
-                finished in
+            }, completion: { finished in
                 transitionContext.completeTransition(true)
         })
     }
