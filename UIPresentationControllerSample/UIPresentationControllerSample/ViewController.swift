@@ -67,10 +67,10 @@ class CustomPresentationController: UIPresentationController {
     }
 
     override func dismissalTransitionWillBegin() {
-        self.presentedViewController.transitionCoordinator()?.animateAlongsideTransition({ [unowned self] context in
+        presentedViewController.transitionCoordinator()?.animateAlongsideTransition({ [unowned self] context in
             self.overlay.alpha = 0.0
             }, completion: nil)
-    }
+        }
 
     override func dismissalTransitionDidEnd(completed: Bool) {
         if completed {
@@ -86,7 +86,7 @@ class CustomPresentationController: UIPresentationController {
         var presentedViewFrame = CGRectZero
         let containerBounds = containerView.bounds
         presentedViewFrame.size = sizeForChildContentContainer(presentedViewController, withParentContainerSize: containerBounds.size)
-        presentedViewFrame.origin.x = containerBounds.size.width - presentedViewFrame.size.width
+        presentedViewFrame.origin.x = 0
         presentedViewFrame.origin.y = containerBounds.size.height - presentedViewFrame.size.height
         return presentedViewFrame
     }
@@ -131,19 +131,22 @@ class CustomAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioni
         let containerView = transitionContext.containerView()
 
         containerView.insertSubview(presentedController.view, belowSubview: presentingController.view)
+
+        let frame = presentedController.view.frame
+        presentedController.view.frame.origin.x -= containerView.bounds.size.width
         UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-            presentedController.view.frame.origin.x -= containerView.bounds.size.width
+            presentedController.view.frame = frame
             }, completion: { finished in
                 transitionContext.completeTransition(true)
         })
     }
 
     func animateDissmissalTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let presentedController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        let presentedController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         let containerView = transitionContext.containerView()
 
-        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
-            presentedController.view.frame.origin.x = containerView.bounds.size.width
+        UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
+            presentedController.view.frame.origin.x -= containerView.bounds.size.width
             }, completion: { finished in
                 transitionContext.completeTransition(true)
         })
