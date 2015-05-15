@@ -1,0 +1,11 @@
+#xcode
+build/
+
+*.pbxuser
+xcuserdata
+*.xccheckout
+DerivedData
+*.ipa
+*.xcuserstate
+
+Pods
