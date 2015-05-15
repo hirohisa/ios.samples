@@ -1,0 +1,10 @@
+PODS:
+  - ObjectMapper (0.10)
+
+DEPENDENCIES:
+  - ObjectMapper (~> 0.10)
+
+SPEC CHECKSUMS:
+  ObjectMapper: 611c411d3434485c8374000a028de87be1b6038d
+
+COCOAPODS: 0.36.4
