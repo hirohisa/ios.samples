@@ -13,7 +13,8 @@ import RealmSwift
 class Person: Object {
 
     dynamic var name = ""
-    dynamic var age = 0
+    dynamic var age: Int = 0
+    dynamic var createdAt: Double = 0
 }
 
 class ViewController: UIViewController {
@@ -54,13 +55,27 @@ class ViewController: UIViewController {
             }
         }
 
-        let result = realm.objects(Person).filter("age > 2")
+        let result = realm.objects(Person)
 
         if NSThread.isMainThread() {
             println("main thread")
         }
+
+        println("default") // => 3 A B C
         println(result.count)
         for person in result {
+            println(person.name)
+        }
+
+        println("filter") // => 2 B C
+        println(result.count)
+        for person in result.filter("age > 2") {
+            println(person.name)
+        }
+
+        println("sorting desc by createdAt") // => 3 C B A
+        println(result.count)
+        for person in result.sorted("createdAt", ascending: false) {
             println(person.name)
         }
 
@@ -85,7 +100,7 @@ class ViewController: UIViewController {
             println("main thread")
         }
         let realm = Realm()
-        let result = realm.objects(Person).filter("age > 2")
+        let result = realm.objects(Person)
         println(result.count)
         for person in result {
             println(person.name)
@@ -102,14 +117,17 @@ class ViewController: UIViewController {
         let p1 = Person()
         p1.name = "A"
         p1.age = 2
+        p1.createdAt = NSDate().timeIntervalSince1970
 
         let p2 = Person()
         p2.name = "B"
         p2.age = 10
+        p2.createdAt = NSDate().timeIntervalSince1970
 
         let p3 = Person()
         p3.name = "C"
         p3.age = 12
+        p3.createdAt = NSDate().timeIntervalSince1970
 
         return [p1, p2, p3]
     }
