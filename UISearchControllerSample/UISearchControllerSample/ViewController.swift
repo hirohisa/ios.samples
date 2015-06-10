@@ -15,6 +15,8 @@ class SearchResultController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "close", style: .Plain, target: self, action: "dismiss")
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -33,13 +35,13 @@ class SearchResultController: UITableViewController {
         return cell
     }
 
-    func reloadData() {
-        tableView.reloadData()
+    func dismiss() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
 }
 
-class SearchController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate {
+class ViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate {
 
     var source = split("A,B,C,D,E,F,G,H,I,J,K,L,M,N", isSeparator: { $0 == "," })
     var filtered = split("D,E,F,L,M,N", isSeparator: { $0 == "," })
@@ -59,13 +61,32 @@ class SearchController: UITableViewController, UISearchBarDelegate, UISearchCont
         super.viewDidLoad()
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
 
+        pattern1()
+    }
+
+    // standard
+    func pattern1() {
+        searchController = UISearchController(searchResultsController: resultController)
+        let frame = navigationController!.navigationBar.frame
+        searchController.searchBar.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        searchController.searchBar.delegate = self
+        searchController.searchBar.scopeButtonTitles = ["1", "2"];
+        searchController.delegate = self
+        searchController.definesPresentationContext = true
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
+    }
+
+    // tableView's data will change
+    func pattern2() {
         searchController = UISearchController(searchResultsController: nil)
-        //searchController = UISearchController(searchResultsController: UINavigationController(rootViewController: resultController))
 
         let frame = navigationController!.navigationBar.frame
         searchController.searchBar.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         searchController.searchBar.delegate = self
         searchController.delegate = self
+        searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
         navigationItem.titleView = searchController.searchBar
@@ -117,6 +138,7 @@ class SearchController: UITableViewController, UISearchBarDelegate, UISearchCont
 
     func didDismissSearchController(searchController: UISearchController) {
         println("did dismiss")
+        reloadData()
     }
     
     func presentSearchController(searchController: UISearchController) {
@@ -124,3 +146,11 @@ class SearchController: UITableViewController, UISearchBarDelegate, UISearchCont
     }
     
 }
+
+extension ViewController: UISearchResultsUpdating {
+
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        println("update")
+    }
+}
+
