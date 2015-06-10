@@ -45,9 +45,10 @@ class ViewController: UITableViewController, UISearchBarDelegate, UISearchContro
 
     var source = split("A,B,C,D,E,F,G,H,I,J,K,L,M,N", isSeparator: { $0 == "," })
     var filtered = split("D,E,F,L,M,N", isSeparator: { $0 == "," })
+    var isSearching = false
 
     var result: [String] {
-        if searchController.active {
+        if isSearching {
             return filtered
         } else {
             return source
@@ -138,6 +139,7 @@ class ViewController: UITableViewController, UISearchBarDelegate, UISearchContro
 
     func didDismissSearchController(searchController: UISearchController) {
         println("did dismiss")
+        isSearching = false
         reloadData()
     }
     
@@ -151,6 +153,7 @@ extension ViewController: UISearchResultsUpdating {
 
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         println("update")
+        isSearching = true
     }
 }
 
