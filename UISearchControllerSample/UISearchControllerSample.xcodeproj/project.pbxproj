@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A12A07A81B05C2A3002695B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12A07A71B05C2A3002695B7 /* AppDelegate.swift */; };
-		A12A07AA1B05C2A3002695B7 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12A07A91B05C2A3002695B7 /* SearchController.swift */; };
+		A12A07AA1B05C2A3002695B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12A07A91B05C2A3002695B7 /* ViewController.swift */; };
 		A12A07AD1B05C2A3002695B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12A07AB1B05C2A3002695B7 /* Main.storyboard */; };
 		A12A07AF1B05C2A3002695B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12A07AE1B05C2A3002695B7 /* Images.xcassets */; };
 		A12A07B21B05C2A3002695B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12A07B01B05C2A3002695B7 /* LaunchScreen.xib */; };
@@ -29,7 +29,7 @@
 		A12A07A21B05C2A3002695B7 /* UISearchControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UISearchControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12A07A61B05C2A3002695B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12A07A71B05C2A3002695B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A12A07A91B05C2A3002695B7 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		A12A07A91B05C2A3002695B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A12A07AC1B05C2A3002695B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A12A07AE1B05C2A3002695B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A12A07B11B05C2A3002695B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				A12A07A71B05C2A3002695B7 /* AppDelegate.swift */,
-				A12A07A91B05C2A3002695B7 /* SearchController.swift */,
+				A12A07A91B05C2A3002695B7 /* ViewController.swift */,
 				A12A07AB1B05C2A3002695B7 /* Main.storyboard */,
 				A12A07AE1B05C2A3002695B7 /* Images.xcassets */,
 				A12A07B01B05C2A3002695B7 /* LaunchScreen.xib */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12A07AA1B05C2A3002695B7 /* SearchController.swift in Sources */,
+				A12A07AA1B05C2A3002695B7 /* ViewController.swift in Sources */,
 				A12A07A81B05C2A3002695B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +411,7 @@
 				A12A07C31B05C2A4002695B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A12A07C41B05C2A4002695B7 /* Build configuration list for PBXNativeTarget "UISearchControllerSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				A12A07C61B05C2A4002695B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
