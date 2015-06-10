@@ -62,7 +62,7 @@ class ViewController: UITableViewController, UISearchBarDelegate, UISearchContro
         super.viewDidLoad()
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
 
-        pattern1()
+        pattern3()
     }
 
     // standard
@@ -79,8 +79,37 @@ class ViewController: UITableViewController, UISearchBarDelegate, UISearchContro
         tableView.tableHeaderView = searchController.searchBar
     }
 
-    // tableView's data will change
+    // oops
     func pattern2() {
+        searchController = UISearchController(searchResultsController: resultController)
+        let frame = navigationController!.navigationBar.frame
+        searchController.searchBar.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        searchController.searchBar.delegate = self
+        searchController.searchBar.scopeButtonTitles = ["1", "2"];
+        searchController.delegate = self
+        searchController.definesPresentationContext = true
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.dimsBackgroundDuringPresentation = false
+        navigationItem.titleView = searchController.searchBar
+    }
+
+    // oops
+    func pattern3() {
+        searchController = UISearchController(searchResultsController: resultController)
+        let frame = navigationController!.navigationBar.frame
+        searchController.searchBar.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        searchController.searchBar.delegate = self
+        searchController.searchBar.scopeButtonTitles = ["1", "2"];
+        searchController.delegate = self
+        searchController.definesPresentationContext = true
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
+        navigationController?.navigationBarHidden = true
+    }
+
+    // tableView's data will change
+    func pattern4() {
         searchController = UISearchController(searchResultsController: nil)
 
         let frame = navigationController!.navigationBar.frame
