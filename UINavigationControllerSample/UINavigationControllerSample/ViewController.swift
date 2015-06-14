@@ -19,9 +19,19 @@ class ViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
 
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        //let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        //navigationItem.backBarButtonItem = backButtonItem
+    }
 
-        navigationController?.hidesBarsOnTap = true
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         navigationController?.hidesBarsOnSwipe = true
+        //navigationController?.hidesBarsOnTap = true
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.hidesBarsOnSwipe = false
     }
 
     override func didReceiveMemoryWarning() {
