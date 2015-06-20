@@ -13,6 +13,7 @@
 		A1304A901B28B31100ABA9F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1304A8F1B28B31100ABA9F6 /* Images.xcassets */; };
 		A1304A931B28B31100ABA9F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1304A911B28B31100ABA9F6 /* LaunchScreen.xib */; };
 		A1304A9F1B28B31100ABA9F6 /* UINavigationControllerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1304A9E1B28B31100ABA9F6 /* UINavigationControllerSampleTests.swift */; };
+		A1B2390E1B35AE8A0009AEC4 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2390D1B35AE8A0009AEC4 /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A1304A981B28B31100ABA9F6 /* UINavigationControllerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UINavigationControllerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1304A9D1B28B31100ABA9F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1304A9E1B28B31100ABA9F6 /* UINavigationControllerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSampleTests.swift; sourceTree = "<group>"; };
+		A1B2390D1B35AE8A0009AEC4 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				A1304A881B28B31100ABA9F6 /* AppDelegate.swift */,
 				A1304A8A1B28B31100ABA9F6 /* ViewController.swift */,
+				A1B2390D1B35AE8A0009AEC4 /* NavigationBar.swift */,
 				A1304A8C1B28B31100ABA9F6 /* Main.storyboard */,
 				A1304A8F1B28B31100ABA9F6 /* Images.xcassets */,
 				A1304A911B28B31100ABA9F6 /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				A1304A8B1B28B31100ABA9F6 /* ViewController.swift in Sources */,
 				A1304A891B28B31100ABA9F6 /* AppDelegate.swift in Sources */,
+				A1B2390E1B35AE8A0009AEC4 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +415,7 @@
 				A1304AA41B28B31100ABA9F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1304AA51B28B31100ABA9F6 /* Build configuration list for PBXNativeTarget "UINavigationControllerSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				A1304AA71B28B31100ABA9F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
