@@ -19,9 +19,6 @@ class ViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
 
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
-        let backButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-//        navigationItem.backBarButtonItem = backButtonItem
     }
 
     override func viewDidAppear(animated: Bool) {
