@@ -1,6 +1,5 @@
 //
 //  NavigationBar.swift
-//  UINavigationControllerSample
 //
 //  Copyright (c) 2015 Hirohisa Kawasaki. All rights reserved.
 //
