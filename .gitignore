@@ -9,3 +9,4 @@ DerivedData
 *.xcuserstate
 
 Pods
+Carthage
