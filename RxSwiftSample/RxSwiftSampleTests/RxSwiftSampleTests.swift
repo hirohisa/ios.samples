@@ -12,6 +12,41 @@ import RxSwift
 
 class RxSwiftSampleTests: XCTestCase {
 
+    func testCombineLatest() {
+
+        let v0 = Variable(0)
+        let v1 = Variable(1)
+
+        var result: Int = 0
+        let label = UILabel()
+        XCTAssertNil(label.text, "label's text is not nil")
+
+        let o = combineLatest(v0, v1) { (a0, a1) in a0 + a1 }
+        let d = o >- subscribeNext { result = $0 }
+        o >- filter { $0 % 2 != 0 } >- subscribeNext { label.text = "\($0)" }
+
+        XCTAssertEqual(label.text!, "1")
+        XCTAssertEqual(result, 1)
+
+        v0.next(2)
+        XCTAssertEqual(label.text!, "3")
+        XCTAssertEqual(result, 3)
+
+        v1.next(2)
+
+        XCTAssertEqual(label.text!, "3")
+        XCTAssertEqual(result, 4)
+
+        d.dispose()
+
+        v0.next(1)
+        v1.next(1)
+
+        XCTAssertEqual(label.text!, "3")
+        XCTAssertEqual(result, 4)
+
+    }
+
     func testZip1() {
 
         let v0 = Variable(0)
@@ -37,6 +72,8 @@ class RxSwiftSampleTests: XCTestCase {
         XCTAssertEqual(result, 1)
 
         v0.next(2)
+        XCTAssertEqual(result, 1)
+
         v1.next(3)
 
         XCTAssertEqual(result, 5)
