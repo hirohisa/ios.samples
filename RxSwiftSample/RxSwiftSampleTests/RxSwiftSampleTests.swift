@@ -28,22 +28,28 @@ class RxSwiftSampleTests: XCTestCase {
         XCTAssertEqual(label.text!, "1")
         XCTAssertEqual(result, 1)
 
-        v0.next(2)
+        v0.next(2) // 2 + 1
         XCTAssertEqual(label.text!, "3")
         XCTAssertEqual(result, 3)
 
-        v1.next(2)
+        v1.next(2) // 2 + 2
 
         XCTAssertEqual(label.text!, "3")
         XCTAssertEqual(result, 4)
+
+        v0.next(5) // 5 + 2
+        v1.next(5) // 5 + 5
+        XCTAssertEqual(label.text!, "7")
+
+        XCTAssertEqual(result, 10)
 
         d.dispose()
 
-        v0.next(1)
-        v1.next(1)
+        v0.next(1) // 1 + 5
+        v1.next(1) // 1 + 1
 
-        XCTAssertEqual(label.text!, "3")
-        XCTAssertEqual(result, 4)
+        XCTAssertEqual(label.text!, "7")
+        XCTAssertEqual(result, 10)
 
     }
 
