@@ -18,7 +18,7 @@ class RxSwiftSampleTests: XCTestCase {
         let v1 = Variable(1)
 
         var result: Int = 0
-        let d = zip(v0, v1) { (a0, a1) in a0 + a1 } >- subscribeNext { result = $0 }
+        zip(v0, v1) { (a0, a1) in a0 + a1 } >- subscribeNext { result = $0 }
 
         XCTAssertEqual(result, 1)
 
@@ -30,19 +30,23 @@ class RxSwiftSampleTests: XCTestCase {
         let v1 = Variable(1)
 
         var result: Int = 0
-        let d = zip(v0, v1) { (a0, a1) in a0 + a1 }
-
-        d >- subscribeNext { result = $0 }
+        let o = zip(v0, v1) { (a0, a1) in a0 + a1 }
+        let d = o >- subscribeNext { result = $0 }
+        o >- subscribeNext { println($0) }
 
         XCTAssertEqual(result, 1)
 
         v0.next(2)
+        v1.next(3)
 
-        XCTAssertEqual(result, 1)
+        XCTAssertEqual(result, 5)
 
-        d >- subscribeNext { result = $0 }
+        d.dispose()
 
-        XCTAssertEqual(result, 3)
+        v0.next(1)
+        v1.next(1)
+
+        XCTAssertEqual(result, 5)
 
     }
 
