@@ -93,4 +93,25 @@ class RxSwiftSampleTests: XCTestCase {
 
     }
 
+    func testUseArray() {
+
+        let v0 = Variable([1,2,3])
+        let v1 = Variable([1,2,3])
+
+        var result: Int = 0
+
+        let o = combineLatest(v0, v1) { (a0, a1) in a0 + a1 }
+        o >- subscribeNext { (array : Array) -> Void in
+            result = array.reduce(0) { $0 + $1 }
+        }
+
+        XCTAssertEqual(result, 12)
+
+        v0.next([2,3,4])
+
+        XCTAssertEqual(result, 15)
+
+
+    }
+
 }
