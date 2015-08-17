@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (1.3.1)
+  - PhotoPicker (0.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - PhotoPicker (from `https://github.com/hirohisa/PhotoPicker.git`)
+
+EXTERNAL SOURCES:
+  PhotoPicker:
+    :git: https://github.com/hirohisa/PhotoPicker.git
+
+CHECKOUT OPTIONS:
+  PhotoPicker:
+    :commit: c3b65cea8f4ec1d4ade05cb31e0a3c745310c7fd
+    :git: https://github.com/hirohisa/PhotoPicker.git
+
+SPEC CHECKSUMS:
+  Alamofire: e4ab637e3195b645c814b87a652373439e59f2a4
+  PhotoPicker: 79a3cf70b90b083541bacc8216d1cfdfdda8f1d2
+
+COCOAPODS: 0.38.2
