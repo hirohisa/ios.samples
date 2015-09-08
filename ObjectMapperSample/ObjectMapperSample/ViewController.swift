@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         JsonReader.task("JSON/octocat").resume { result in
-            //println(result)
+            println(result)
             if let mappedUser = Mapper<MappedUser>().map(result) {
                 let user = User(user: mappedUser)
                 println(user)

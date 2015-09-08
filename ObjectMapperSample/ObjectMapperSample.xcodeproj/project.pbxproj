@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		177FC16B11DC5C81243EBC04 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B12D6D428E855D7C7EDF94F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A1DD70B41B9F56B500280946 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD70B31B9F56B500280946 /* JsonReader.swift */; };
 		A1E7CE791AEEA7A400AFC598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E7CE781AEEA7A400AFC598 /* AppDelegate.swift */; };
 		A1E7CE7B1AEEA7A400AFC598 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E7CE7A1AEEA7A400AFC598 /* ViewController.swift */; };
 		A1E7CE7E1AEEA7A400AFC598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E7CE7C1AEEA7A400AFC598 /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		A1E7CE8F1AEEA7A400AFC598 /* ObjectMapperSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E7CE8E1AEEA7A400AFC598 /* ObjectMapperSampleTests.swift */; };
 		A1E7CE991AEEA81D00AFC598 /* JSON in Resources */ = {isa = PBXBuildFile; fileRef = A1E7CE981AEEA81D00AFC598 /* JSON */; };
 		A1E7CE9F1AEEA8FF00AFC598 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E7CE9E1AEEA8FF00AFC598 /* User.swift */; };
-		A1E7CEA21AEEADD000AFC598 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E7CEA11AEEADD000AFC598 /* JsonReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		78137505129C773D2D6B1E66 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B12D6D428E855D7C7EDF94F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DD70B31B9F56B500280946 /* JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 		A1E7CE731AEEA7A400AFC598 /* ObjectMapperSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectMapperSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E7CE771AEEA7A400AFC598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1E7CE781AEEA7A400AFC598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		A1E7CE8E1AEEA7A400AFC598 /* ObjectMapperSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperSampleTests.swift; sourceTree = "<group>"; };
 		A1E7CE981AEEA81D00AFC598 /* JSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JSON; sourceTree = "<group>"; };
 		A1E7CE9E1AEEA8FF00AFC598 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A1E7CEA11AEEADD000AFC598 /* JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 		EBB6454115B6509914E87528 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,10 +84,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A1DD70B21B9F56B500280946 /* JsonReader */ = {
+			isa = PBXGroup;
+			children = (
+				A1DD70B31B9F56B500280946 /* JsonReader.swift */,
+			);
+			path = JsonReader;
+			sourceTree = "<group>";
+		};
 		A1E7CE6A1AEEA7A400AFC598 = {
 			isa = PBXGroup;
 			children = (
-				A1E7CEA01AEEADD000AFC598 /* JsonReader */,
+				A1DD70B21B9F56B500280946 /* JsonReader */,
 				A1E7CE981AEEA81D00AFC598 /* JSON */,
 				A1E7CE751AEEA7A400AFC598 /* ObjectMapperSample */,
 				A1E7CE8B1AEEA7A400AFC598 /* ObjectMapperSampleTests */,
@@ -151,15 +159,6 @@
 				A1E7CE9E1AEEA8FF00AFC598 /* User.swift */,
 			);
 			name = GitHub;
-			sourceTree = "<group>";
-		};
-		A1E7CEA01AEEADD000AFC598 /* JsonReader */ = {
-			isa = PBXGroup;
-			children = (
-				A1E7CEA11AEEADD000AFC598 /* JsonReader.swift */,
-			);
-			name = JsonReader;
-			path = ../../frameworks/JsonReader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1E7CEA21AEEADD000AFC598 /* JsonReader.swift in Sources */,
+				A1DD70B41B9F56B500280946 /* JsonReader.swift in Sources */,
 				A1E7CE7B1AEEA7A400AFC598 /* ViewController.swift in Sources */,
 				A1E7CE9F1AEEA8FF00AFC598 /* User.swift in Sources */,
 				A1E7CE791AEEA7A400AFC598 /* AppDelegate.swift in Sources */,
