@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         let test = "test".dataUsingEncoding(NSUTF8StringEncoding)!
         let image = UIImage(named: "image.jpg")!
         let data1 = UIImageJPEGRepresentation(image, 0.1)!
-        let data2 = UIImageJPEGRepresentation(image, 0.1)!
+
+        let URL = NSBundle.mainBundle().URLForResource("image", withExtension: "jpg")!
 
         Alamofire.upload(
             .POST,
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
             multipartFormData: { multipartFormData in
                 multipartFormData.appendBodyPart(data: test, name: "test")
                 multipartFormData.appendBodyPart(data: data1, name: "test1")
-                multipartFormData.appendBodyPart(data: data2, name: "test2")
+                multipartFormData.appendBodyPart(fileURL: URL, name: "test2")
             },
             encodingCompletion: { encodingResult in
                 switch encodingResult {
