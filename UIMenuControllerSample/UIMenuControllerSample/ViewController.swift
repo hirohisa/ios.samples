@@ -8,8 +8,53 @@
 
 import UIKit
 
+class Label: UILabel {
+
+    var gestureRecognizer: UILongPressGestureRecognizer! {
+        didSet {
+            addGestureRecognizer(gestureRecognizer)
+        }
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        userInteractionEnabled = true
+        gestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed:")
+    }
+
+    func longPressed(sender: AnyObject?) {
+        if gestureRecognizer.state != .Began {
+            return
+        }
+
+        becomeFirstResponder()
+
+        let menuController = UIMenuController.sharedMenuController()
+        let rect = CGRect(x: bounds.minX, y: bounds.midY, width: bounds.width, height: 0)
+        menuController.setTargetRect(rect, inView: self)
+        menuController.setMenuVisible(true, animated: true)
+    }
+
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+
+    override func resignFirstResponder() -> Bool {
+        let menuController = UIMenuController.sharedMenuController()
+        menuController.setMenuVisible(false, animated: false)
+        return true
+    }
+
+    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
+        print(action)
+
+        return true
+    }
+}
+
 class Cell: UITableViewCell {
-    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var mainLabel: Label!
 }
 
 class ViewController: UIViewController {
