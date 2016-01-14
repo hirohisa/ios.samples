@@ -45,12 +45,6 @@ class Label: UILabel {
         menuController.setMenuVisible(false, animated: false)
         return true
     }
-
-    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
-        print(action)
-
-        return true
-    }
 }
 
 class Cell: UITableViewCell {
@@ -69,6 +63,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
+        print(action)
+
+        return true
+    }
+
 }
 
 extension ViewController: UITableViewDataSource {
