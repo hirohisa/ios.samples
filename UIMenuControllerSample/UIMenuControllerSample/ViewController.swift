@@ -70,6 +70,7 @@ class Cell: UITableViewCell {
     }
 
     override func delete(sender: AnyObject?) {
+        mainLabel.text = "delete text"
     }
 
 }
