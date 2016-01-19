@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A124F6E81BA9F06200A482F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A124F6E71BA9F06200A482F6 /* AppDelegate.swift */; };
-		A124F6EA1BA9F06200A482F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A124F6E91BA9F06200A482F6 /* ViewController.swift */; };
-		A124F6ED1BA9F06200A482F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A124F6EB1BA9F06200A482F6 /* Main.storyboard */; };
-		A124F6EF1BA9F06200A482F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A124F6EE1BA9F06200A482F6 /* Assets.xcassets */; };
-		A124F6F21BA9F06200A482F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A124F6F01BA9F06200A482F6 /* LaunchScreen.storyboard */; };
-		A124F6FC1BA9F56E00A482F6 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A124F6FB1BA9F56E00A482F6 /* image.jpg */; settings = {ASSET_TAGS = (); }; };
+		A196D0B81C2491A70068E8CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196D0B71C2491A70068E8CF /* AppDelegate.swift */; };
+		A196D0BB1C2491B00068E8CF /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A196D0B91C2491B00068E8CF /* image.jpg */; };
+		A196D0BE1C2491B70068E8CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196D0BD1C2491B70068E8CF /* ViewController.swift */; };
+		A196D0C31C2491CC0068E8CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A196D0BF1C2491CC0068E8CF /* LaunchScreen.storyboard */; };
+		A196D0C41C2491CC0068E8CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A196D0C11C2491CC0068E8CF /* Main.storyboard */; };
+		A196D0C61C2491D70068E8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A196D0C51C2491D70068E8CF /* Assets.xcassets */; };
+		A196D0C81C2491ED0068E8CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A196D0C71C2491ED0068E8CF /* Default-568h@2x.png */; };
 		FD87EB576B94B0A5164477AA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BA8F40E396985F4509129C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24BA8F40E396985F4509129C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A124F6E41BA9F06200A482F6 /* AlamofileSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofileSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A124F6E71BA9F06200A482F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A124F6E91BA9F06200A482F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A124F6EC1BA9F06200A482F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A124F6EE1BA9F06200A482F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A124F6F11BA9F06200A482F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A124F6F31BA9F06200A482F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A124F6FB1BA9F56E00A482F6 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		A124F6E41BA9F06200A482F6 /* AlamofireSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A196D0B71C2491A70068E8CF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AlamofireSample/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		A196D0B91C2491B00068E8CF /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpg; path = AlamofireSample/image.jpg; sourceTree = SOURCE_ROOT; };
+		A196D0BA1C2491B00068E8CF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AlamofireSample/Info.plist; sourceTree = SOURCE_ROOT; };
+		A196D0BD1C2491B70068E8CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = AlamofireSample/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		A196D0C01C2491CC0068E8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AlamofireSample/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		A196D0C21C2491CC0068E8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AlamofireSample/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		A196D0C51C2491D70068E8CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AlamofireSample/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		A196D0C71C2491ED0068E8CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B81F5E73FD988BBABC80006C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BDF3FD92C24900DFDCF876A2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,7 +55,8 @@
 		A124F6DB1BA9F06200A482F6 = {
 			isa = PBXGroup;
 			children = (
-				A124F6E61BA9F06200A482F6 /* AlamofileSample */,
+				A196D0C71C2491ED0068E8CF /* Default-568h@2x.png */,
+				A124F6E61BA9F06200A482F6 /* AlamofireSample */,
 				A124F6E51BA9F06200A482F6 /* Products */,
 				E4AA6EEBD017129A6F7F130F /* Pods */,
 				04BE36DA139AEF30D5EAC873 /* Frameworks */,
@@ -63,22 +66,23 @@
 		A124F6E51BA9F06200A482F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A124F6E41BA9F06200A482F6 /* AlamofileSample.app */,
+				A124F6E41BA9F06200A482F6 /* AlamofireSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A124F6E61BA9F06200A482F6 /* AlamofileSample */ = {
+		A124F6E61BA9F06200A482F6 /* AlamofireSample */ = {
 			isa = PBXGroup;
 			children = (
-				A124F6E71BA9F06200A482F6 /* AppDelegate.swift */,
-				A124F6E91BA9F06200A482F6 /* ViewController.swift */,
-				A124F6EB1BA9F06200A482F6 /* Main.storyboard */,
-				A124F6EE1BA9F06200A482F6 /* Assets.xcassets */,
-				A124F6F01BA9F06200A482F6 /* LaunchScreen.storyboard */,
-				A124F6F31BA9F06200A482F6 /* Info.plist */,
-				A124F6FB1BA9F56E00A482F6 /* image.jpg */,
+				A196D0B71C2491A70068E8CF /* AppDelegate.swift */,
+				A196D0BD1C2491B70068E8CF /* ViewController.swift */,
+				A196D0BF1C2491CC0068E8CF /* LaunchScreen.storyboard */,
+				A196D0C11C2491CC0068E8CF /* Main.storyboard */,
+				A196D0C51C2491D70068E8CF /* Assets.xcassets */,
+				A196D0B91C2491B00068E8CF /* image.jpg */,
+				A196D0BA1C2491B00068E8CF /* Info.plist */,
 			);
+			name = AlamofireSample;
 			path = AlamofileSample;
 			sourceTree = "<group>";
 		};
@@ -94,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A124F6E31BA9F06200A482F6 /* AlamofileSample */ = {
+		A124F6E31BA9F06200A482F6 /* AlamofireSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A124F6F61BA9F06200A482F6 /* Build configuration list for PBXNativeTarget "AlamofileSample" */;
+			buildConfigurationList = A124F6F61BA9F06200A482F6 /* Build configuration list for PBXNativeTarget "AlamofireSample" */;
 			buildPhases = (
 				C0F328AB19E8EFB0ED5EDDAE /* Check Pods Manifest.lock */,
 				A124F6E01BA9F06200A482F6 /* Sources */,
@@ -109,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = AlamofileSample;
+			name = AlamofireSample;
 			productName = AlamofileSample;
-			productReference = A124F6E41BA9F06200A482F6 /* AlamofileSample.app */;
+			productReference = A124F6E41BA9F06200A482F6 /* AlamofireSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -120,7 +124,7 @@
 		A124F6DC1BA9F06200A482F6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Hirohisa Kawasaki";
 				TargetAttributes = {
 					A124F6E31BA9F06200A482F6 = {
@@ -128,7 +132,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A124F6DF1BA9F06200A482F6 /* Build configuration list for PBXProject "AlamofileSample" */;
+			buildConfigurationList = A124F6DF1BA9F06200A482F6 /* Build configuration list for PBXProject "AlamofireSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -141,7 +145,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A124F6E31BA9F06200A482F6 /* AlamofileSample */,
+				A124F6E31BA9F06200A482F6 /* AlamofireSample */,
 			);
 		};
 /* End PBXProject section */
@@ -151,10 +155,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A124F6F21BA9F06200A482F6 /* LaunchScreen.storyboard in Resources */,
-				A124F6EF1BA9F06200A482F6 /* Assets.xcassets in Resources */,
-				A124F6ED1BA9F06200A482F6 /* Main.storyboard in Resources */,
-				A124F6FC1BA9F56E00A482F6 /* image.jpg in Resources */,
+				A196D0C41C2491CC0068E8CF /* Main.storyboard in Resources */,
+				A196D0C31C2491CC0068E8CF /* LaunchScreen.storyboard in Resources */,
+				A196D0C61C2491D70068E8CF /* Assets.xcassets in Resources */,
+				A196D0BB1C2491B00068E8CF /* image.jpg in Resources */,
+				A196D0C81C2491ED0068E8CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,28 +218,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A124F6EA1BA9F06200A482F6 /* ViewController.swift in Sources */,
-				A124F6E81BA9F06200A482F6 /* AppDelegate.swift in Sources */,
+				A196D0B81C2491A70068E8CF /* AppDelegate.swift in Sources */,
+				A196D0BE1C2491B70068E8CF /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A124F6EB1BA9F06200A482F6 /* Main.storyboard */ = {
+		A196D0BF1C2491CC0068E8CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A124F6EC1BA9F06200A482F6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A124F6F01BA9F06200A482F6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A124F6F11BA9F06200A482F6 /* Base */,
+				A196D0C01C2491CC0068E8CF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A196D0C11C2491CC0068E8CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A196D0C21C2491CC0068E8CF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -328,10 +333,10 @@
 			baseConfigurationReference = BDF3FD92C24900DFDCF876A2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AlamofileSample/Info.plist;
+				INFOPLIST_FILE = AlamofireSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.hirohisa.AlamofileSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.hirohisa.AlamofireSample;
+				PRODUCT_NAME = AlamofireSample;
 			};
 			name = Debug;
 		};
@@ -340,17 +345,17 @@
 			baseConfigurationReference = B81F5E73FD988BBABC80006C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AlamofileSample/Info.plist;
+				INFOPLIST_FILE = AlamofireSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.hirohisa.AlamofileSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.hirohisa.AlamofireSample;
+				PRODUCT_NAME = AlamofireSample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A124F6DF1BA9F06200A482F6 /* Build configuration list for PBXProject "AlamofileSample" */ = {
+		A124F6DF1BA9F06200A482F6 /* Build configuration list for PBXProject "AlamofireSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A124F6F41BA9F06200A482F6 /* Debug */,
@@ -359,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A124F6F61BA9F06200A482F6 /* Build configuration list for PBXNativeTarget "AlamofileSample" */ = {
+		A124F6F61BA9F06200A482F6 /* Build configuration list for PBXNativeTarget "AlamofireSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A124F6F71BA9F06200A482F6 /* Debug */,

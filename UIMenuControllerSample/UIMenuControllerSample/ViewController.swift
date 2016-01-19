@@ -54,7 +54,6 @@ class Label: UILabel {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-
 }
 
 class Cell: UITableViewCell {
@@ -87,6 +86,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
+        print(action)
+
+        return true
+    }
+
 }
 
 extension ViewController: UITableViewDataSource {

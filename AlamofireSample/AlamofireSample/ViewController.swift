@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  AlamofileSample
+//  AlamofireSample
 //
 //  Created by Hirohisa Kawasaki on 9/17/15.
 //  Copyright © 2015 Hirohisa Kawasaki. All rights reserved.
